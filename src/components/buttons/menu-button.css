@@ -1,0 +1,56 @@
+.btn-container{
+    width: 60px;
+    height: 140px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-container:hover{
+    background-color: tomato;
+}
+
+.btn-image{
+    width: 50px;
+    height: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+
+.active{
+    background-color: tomato;
+}
+
+.active .btn-text{
+    color: white;
+}
+
+.btn-image img{
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-text{
+    margin: 0;
+    padding: 10px;
+    font-size: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 600;
+    color: tan;
+    transition: all 0.6s ease-in-out;
+}
+
+.btn-container:hover .btn-text{
+    color: white;
+}
