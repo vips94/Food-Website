@@ -27,6 +27,17 @@ const Hero = () => {
                     onClick={() => {
                       setPrevious(current);
                       setCurrent(item.id);
+                      const textContainer =
+                        document.getElementById("side-title");
+
+                      // Remove the animation class to reset the animation
+                      textContainer.classList.remove("fade-in");
+
+                      // Trigger reflow to restart the animation
+                      void textContainer.offsetWidth;
+
+                      // Add the animation class back to trigger the animation
+                      textContainer.classList.add("fade-in");
                     }}
                   />
                 );
@@ -81,7 +92,9 @@ const Hero = () => {
             })}
           </div>
           <div className="title-side-section">
-            <h1>{items.filter((item) => current === item.id)?.[0].name}</h1>
+            <h1 id="side-title">
+              {items.filter((item) => current === item.id)?.[0].name}
+            </h1>
           </div>
         </div>
       </div>

@@ -102,13 +102,14 @@
 .title-side-section {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   z-index: 2;
+  transition: all 1s ease-in-out;
 }
 
 .title-side-section h1 {
@@ -123,6 +124,35 @@
   -ms-writing-mode: vertical-rl;
   letter-spacing: -15px;
   word-spacing: -15px;
+  transition: all 1.5s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+  -webkit-animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
 }
 
 .hide {
